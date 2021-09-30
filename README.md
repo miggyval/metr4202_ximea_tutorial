@@ -74,6 +74,7 @@ Test that everything is working correctly by running the launch file and ```rqt_
 ```
 roslaunch ximea_ros_cam example_cam.launch
 ```
+Run the GUI program ```rqt_image_view``` on a new terminal session
 ```
 rosrun rqt_image_view rqt_image_view
 ```
