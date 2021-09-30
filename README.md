@@ -107,6 +107,8 @@ Select the ```/ximea_cam/image_raw``` topic and you should see the output of the
 ```sudo apt install ros-noetic-camera-calibration```
 - Next, while the example camera node is running, from the launch file, run the calibration python script
 - Note: This is the same process for any time of camera, but with slightly different parameters
+- The argument ```square``` should be the side length of each grid square in meters
+- The argument size is the number of corner points (the grid given to you should be fine)
 ```
 rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.025 image:=/ximea_cam/image_raw camera:=/ximea_cam
 ```
