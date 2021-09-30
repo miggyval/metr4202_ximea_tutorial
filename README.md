@@ -28,6 +28,20 @@ cd package
 ```
 echo 0 | sudo tee /sys/module/usbcore/parameters/usbfs_memory_mb
 ```
+- Set realtime priority to the /etc/security/limits.conf
+- Place the following in /etc/security/limits.conf to make the Ximea camera driver have real time priority
+```
+*               -       rtprio          0
+@realtime       -       rtprio          81
+*               -       nice            0
+@realtime       -       nice            -16
+```
+- Then add the current user to the group realtime:
+```
+sudo groupadd realtime
+sudo gpasswd -a $USER realtime
+```
+
 ## Step 2: Install the ROS Ximxea Package
 For this step, you can follow this instructions, as per the tutorial [here](https://github.com/wavelab/ximea_ros_cam)
 - Go to your catkin workspace source directory
