@@ -1,4 +1,10 @@
 # METR4202 Ximea Tutorial
+# Introduction
+There will be four steps to this tutorial:
+- Step 1: Installing Ximea Software Package
+- Step 2: Install the ROS Ximxea Package
+- Step 3: Camera Calibration
+- Step 4: Setup the ArUco Tag Detection Library
 ## Step 1: Installing Ximea Software Package
 - If you're on Ubuntu (Linux), make sure all of your packages are up to date, and that you have these installed
 ```
@@ -81,17 +87,17 @@ Run the GUI program ```rqt_image_view``` on a new terminal session
 rosrun rqt_image_view rqt_image_view
 ```
 Select the ```/ximea_cam/image_raw``` topic and you should see the output of the camera
-# Step 3: Calibration
+## Step 3: Camera Calibration
 - If it isn't installed already, install the ```camera_calibration``` package on ROS
 
 ```sudo apt install ros-noetic-camera-calibration```
 - Next, while the example camera node is running, from the launch file, run the calibration python script
-
+- Note: This is the same process for any time of camera, but with slightly different parameters
 ```
 rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.025 image:=/ximea_cam/image_raw camera:=/ximea_cam
 ```
 - Follow the instructions on the GUI to CALIBRATE and COMMIT
-# Step 4: Setup the ArUco Tag Detection Library
+## Step 4: Setup the ArUco Tag Detection Library
 - Install the fiducials library by cloning the repository
 ```
 cd ~/catkin_ws/src
@@ -118,3 +124,6 @@ Again, this should publish the images so you can run the following to view the i
 ```
 rosrun rqt_image_view rqt_image_view
 ```
+## Ending Notes
+This tutorial was written by Miguel Valencia, tutor of METR4202.
+Please contact me via Ed for the course, if you would like more clarification.
