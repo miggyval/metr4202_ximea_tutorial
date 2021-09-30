@@ -91,6 +91,7 @@ Select the ```/ximea_cam/image_raw``` topic and you should see the output of the
 rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.025 image:=/ximea_cam/image_raw camera:=/ximea_cam
 ```
 - Follow the instructions on the GUI to CALIBRATE and COMMIT
+# Step 4: Setup the ArUco Tag Detection Library
 - Install the fiducials library by cloning the repository
 ```
 cd ~/catkin_ws/src
@@ -112,4 +113,8 @@ catkin_make
 Finally, launch the ```aruco_detect``` node
 ```
 roslaunch aruco_detect aruco_detect.launch camera:=/ximea_cam image:=/image_raw
+```
+Again, this should publish the images so you can run the following to view the image with the fiducials
+```
+rosrun rqt_image_view rqt_image_view
 ```
