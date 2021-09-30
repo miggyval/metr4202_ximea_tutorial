@@ -88,5 +88,24 @@ Select the ```/ximea_cam/image_raw``` topic and you should see the output of the
 - Next, while the example camera node is running, from the launch file, run the calibration python script
 
 ```
-rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.108 image:=/ximea_cam/image_raw camera:=/ximea_cam
+rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.025 image:=/ximea_cam/image_raw camera:=/ximea_cam
+```
+- Follow the instructions on the GUI to CALIBRATE and COMMIT
+- Install the fiducials library by cloning the repository
+```
+cd ~/catkin_ws/src
+```
+```
+git clone https://github.com/UbiquityRobotics/fiducials.git
+```
+Install the dependency ```vision_msgs```
+```
+sudo apt install ros-noetic-vision-msgs
+```
+Then make the library again
+```
+cd ~/catkin_ws
+```
+```
+catkin_make
 ```
