@@ -50,7 +50,9 @@ source devel/setup.sh
 ```
 - Edit the ```example_camera``` file with ```rosed```
 
-``` rosed ximea_ros_cam example_cam.launch```
+```
+rosed ximea_ros_cam example_cam.launch
+```
 - Change the serial number to the number on your camera (also on the cable and case)
 
 ```
