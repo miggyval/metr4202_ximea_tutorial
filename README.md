@@ -69,3 +69,12 @@ source devel/setup.sh
     </node>
 </launch>
 ```
+Test that everything is working correctly by running the launch file and ```rqt_image_view```
+
+```
+roslaunch ximea_ros_cam example_cam.launch
+```
+```
+rosrun rqt_image_view rqt_image_view
+```
+Select the ```/ximea_cam/image_raw``` topic and you should see the output of the camera
