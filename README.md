@@ -23,8 +23,8 @@ cd package
 echo 0 | sudo tee /sys/module/usbcore/parameters/usbfs_memory_mb
 ```
 ## Step 2: Install the ROS Ximxea Package
+For this step, you can follow this instructions, as per the tutorial [here](https://github.com/wavelab/ximea_ros_cam)
 - Go to your catkin workspace source directory
-
 ```
 cd ~/catkin_ws/src
 ```
@@ -79,3 +79,12 @@ Run the GUI program ```rqt_image_view``` on a new terminal session
 rosrun rqt_image_view rqt_image_view
 ```
 Select the ```/ximea_cam/image_raw``` topic and you should see the output of the camera
+# Step 3: Calibration
+- If it isn't installed already, install the ```camera_calibration``` package on ROS
+
+```sudo apt install ros-noetic-camera-calibration```
+- Next, while the example camera node is running, from the launch file, run the calibration python script
+
+```
+rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.108 image:=/ximea_cam/image_raw camera:=/ximea_cam
+```
