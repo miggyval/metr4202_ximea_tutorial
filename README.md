@@ -109,3 +109,7 @@ cd ~/catkin_ws
 ```
 catkin_make
 ```
+Finally, launch the ```aruco_detect``` node
+```
+roslaunch aruco_detect aruco_detect.launch camera:=/ximea_cam image:=/image_raw
+```
