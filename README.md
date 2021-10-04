@@ -142,4 +142,5 @@ rosrun rqt_image_view rqt_image_view
 ```
 ## Ending Notes
 This tutorial was written by Miguel Valencia, tutor of METR4202.
+
 Please contact me via Ed for the course, if you would like more clarification.
