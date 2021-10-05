@@ -5,6 +5,12 @@ There will be four steps to this tutorial:
 - Step 2: Install the ROS Ximxea Package
 - Step 3: Camera Calibration
 - Step 4: Setup the ArUco Tag Detection Library
+- 
+**Note:**
+- **This can be done on any Ubuntu 20.04 with IO/USB access.**
+- **You cannot run the Ximea Camera on Construct/ROSjects or WSL.**
+- **You should run this natively, on the RPi4, or on a Virtual Machine.**
+
 ## Step 1: Installing Ximea Software Package
 - If you're on Ubuntu (Linux), make sure all of your packages are up to date, and that you have these installed
 ```
@@ -42,7 +48,7 @@ sudo groupadd realtime
 sudo gpasswd -a $USER realtime
 ```
 
-## Step 2: Install the ROS Ximxea Package
+## Step 2: Install the ROS Ximea Package
 For this step, you can follow this instructions, as per the tutorial [here](https://github.com/wavelab/ximea_ros_cam)
 - Go to your catkin workspace source directory
 ```
@@ -108,7 +114,7 @@ Select the ```/ximea_cam/image_raw``` topic and you should see the output of the
 - Next, while the example camera node is running, from the launch file, run the calibration python script
 - Note: This is the same process for any time of camera, but with slightly different parameters
 - The argument ```square``` should be the side length of each grid square in meters
-- The argument size is the number of corner points (the grid given to you should be fine)
+- The argument ```size``` is the number of corner points (the grid given to you should be fine)
 ```
 rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.025 image:=/ximea_cam/image_raw camera:=/ximea_cam
 ```
