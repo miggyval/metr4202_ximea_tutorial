@@ -1,4 +1,4 @@
-# METR4202 Ximea Tutorial
+# METR4202 Ximea Camera Setup
 # Introduction
 This tutorial is provided as guidelines for setting up the given Ximea cameras with ROS.
 
