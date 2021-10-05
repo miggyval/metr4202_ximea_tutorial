@@ -9,9 +9,10 @@ There will be four steps to this tutorial:
 - Step 4: Setup the ArUco Tag Detection Library
 
 **Note:**
-- **This can be done on any Ubuntu 20.04 with IO/USB access.**
+- **This can be done on any Ubuntu 20.04 system with IO/USB access.**
 - **You cannot run the Ximea Camera on Construct/ROSjects or WSL.**
 - **You should run this natively, on the RPi4, or on a Virtual Machine.**
+- **You will need to see the GUI for the calibration part of the tutorial.**
 
 ## Step 1: Installing Ximea Software Package
 - If you're on Ubuntu (Linux), make sure all of your packages are up to date, and that you have these installed
