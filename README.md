@@ -5,7 +5,7 @@ There will be four steps to this tutorial:
 - Step 2: Install the ROS Ximxea Package
 - Step 3: Camera Calibration
 - Step 4: Setup the ArUco Tag Detection Library
-- 
+
 **Note:**
 - **This can be done on any Ubuntu 20.04 with IO/USB access.**
 - **You cannot run the Ximea Camera on Construct/ROSjects or WSL.**
