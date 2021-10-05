@@ -149,6 +149,5 @@ Again, this should publish the images so you can run the following to view the i
 rosrun rqt_image_view rqt_image_view
 ```
 ## Ending Notes
-This tutorial was written by Miguel Valencia, tutor of METR4202.
 
-Please contact me via Ed for the course, if you would like more clarification.
+Please contact the METR4202 teaching team via Ed for the course, if you would like more clarification.
