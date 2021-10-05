@@ -1,5 +1,7 @@
 # METR4202 Ximea Tutorial
 # Introduction
+This tutorial is provided as guidelines for setting up the given Ximea cameras with ROS.
+
 There will be four steps to this tutorial:
 - Step 1: Installing Ximea Software Package
 - Step 2: Install the ROS Ximxea Package
