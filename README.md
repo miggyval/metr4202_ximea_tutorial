@@ -16,7 +16,7 @@ There will be four steps to this tutorial:
 - **Do not login with root, as this will affect your permissions.**
 
 ## Step 0: Installing rosdep
-Rosdep installs system dependencies
+Rosdep installs system dependencies, but this step hasn't been done on the RPi4.
 ```
 sudo apt install python3-rosdep
 ```
