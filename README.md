@@ -13,7 +13,19 @@ There will be four steps to this tutorial:
 - **You cannot run the Ximea Camera on Construct/ROSjects or WSL.**
 - **You should run this natively, on the RPi4, or on a Virtual Machine.**
 - **You will need to see the GUI for the calibration part of the tutorial.**
+- **Do not login with root, as this will affect your permissions.**
 
+## Step 0: Installing rosdep
+Rosdep installs system dependencies
+```
+sudo apt install python3-rosdep
+```
+```
+sudo rosdep init
+```
+```
+rosdep update
+```
 ## Step 1: Installing Ximea Software Package
 - If you're on Ubuntu (Linux), make sure all of your packages are up to date, and that you have these installed
 ```
